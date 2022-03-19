@@ -43,8 +43,15 @@ Creates a virtual environment and installs the necessary dependencies, proceeds 
 2. `pip install -r requirements.txt`
 3. `python3 cnn/train_cnn.py` (run `--help` if you want to see available parameters)
 
+## Training on Google Cloud
+
+Since most users have restricted access to computing power
+
 # Evaluation
 
+Once the classifier is trained you can run the evaluation script.
 
+1. 
 
 # Inference
+
