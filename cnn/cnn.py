@@ -30,6 +30,7 @@ class CNN(pl.LightningModule):
             nn.Linear(128, 50),
             activation,
             nn.Linear(50, num_classes),
+            activation,
             nn.Softmax()
         )
 
