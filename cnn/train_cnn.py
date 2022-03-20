@@ -40,9 +40,9 @@ def train_model(
         accelerator="cpu",
         val_check_interval=100, 
         callbacks=[
-        EarlyStopping(monitor="val_loss"),
+        EarlyStopping(monitor="train_loss"),
         ModelCheckpoint(
-            monitor='val_loss',
+            monitor='train_loss',
             dirpath=checkpoints_dir,
             filename='sample-quickdraw-{epoch:02d}-{val_loss:.2f}.ckpt'
         )

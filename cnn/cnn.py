@@ -51,10 +51,3 @@ class CNN(pl.LightningModule):
     def configure_optimizers(self):
         optimizer = torch.optim.Adam(self.parameters(), lr=1e-3)
         return optimizer
-
-    def validation_step(self, batch, batch_idx):
-        x, y = batch
-        z = self.model(x)
-        loss = F.cross_entropy(z, y)
-        # Logging to TensorBoard by default
-        self.log("val_loss", loss)
